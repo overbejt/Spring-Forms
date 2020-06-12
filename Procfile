@@ -1,1 +1,1 @@
-web: java -cp target/classes/:target/dependency/* com.josh.first
+web: java -cp target/classes/:target/dependency/* SecondSpringProjectApplication.java

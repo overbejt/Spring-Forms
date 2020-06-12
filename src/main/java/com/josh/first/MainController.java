@@ -31,4 +31,6 @@ public class MainController {
 		System.out.println(user);
 		return "register_success";
 	}  // End of the 'submitForm' method
+	
+//	@GetMapping("/")
 }  // End of the 'MainController' class

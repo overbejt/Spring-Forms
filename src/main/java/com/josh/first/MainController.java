@@ -1,5 +1,8 @@
 package com.josh.first;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,10 @@ public class MainController {
 	public String showForm(Model model) {
 		User user = new User();
 		model.addAttribute("user", user);
+		
+		// For the drop down list\
+		List<String> professionList = Arrays.asList("Developer", "Designer", "Architecht");
+		model.addAttribute("professionList", professionList);
 		return "register_form";
 	}  // End of the 'showForm' method
 	

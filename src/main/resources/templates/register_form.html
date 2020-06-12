@@ -10,6 +10,21 @@
 		margin: 5px;
 		text-align: left;
 	}
+	button {
+		margin: 10px;
+		padding: 10px;
+	}
+	input [type=text], input [type=password] {
+		display: inline-block;
+		width: 200px;
+	}
+	select {
+		display: inline-block;
+		width: 150px;	
+	}
+	input [type=checkbox] {
+		margin-right: 30px;
+	}
 </style>
 </head>
 <body>
@@ -20,17 +35,22 @@
 			<input type="text" th:field="*{name}" /><br/>
 			<label>Email:</label>
 			<input type="text" th:field="*{email}" /><br/>
-			<!--  
-			<label>Gender:</label>
-			<input type="text" th:field="*{gender}" /><br/>
-			<label>Profession:</label>
-			<input type="text" th:field="*{profession}" /><br/>
-			<label>Married:</label>
-			<input type="text" th:field="*{married}" /><br/>
-			<label>Birthday:</label>
-			<input type="text" th:field="*{birthday}" /><br/>
 			<label>Password:</label>
-			<input type="text" th:field="*{password}" /><br/>
+			<input type="password" th:field="*{password}" /><br/>
+			<label>Birthday (yyyy-mm-dd):</label>
+			<input type="text" th:field="*{birthday}" /><br/>
+			<label>Profession:</label>
+			<select th:field="*{profession}">
+				<option th:each="p : ${professionList}" th:value="${p}" th:text="${p}"/>
+			</select><br/>
+			<label>Married:</label>
+			<input type="checkbox" th:field="*{married}" /><br/>
+			<label>Gender:</label>
+			<input type="radio" th:field="*{gender}" value="Male"/>Male
+			<input type="radio" th:field="*{gender}" value="Female"/>Female<br/>
+			<!-- 
+			<label>Note:</label>
+			<textarea rows=5 cols=25 th:field="*{note}"></textarea><br/>
 			-->
 			<button type="submit">Register</button>
 		</form>

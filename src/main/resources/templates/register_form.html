@@ -9,7 +9,20 @@
 		<h1>User Registration</h1>
 		<form action="#" th:action="@{/register}" th:object="${user}" method="post">
 			<label>Full Name:</label>
-			<input tpye="text" th:field="*{name}" />
+			<input type="text" th:field="*{name}" /><br/>
+			<label>Email:</label>
+			<input type="text" th:field="*{email}" /><br/>
+			<label>Gender:</label>
+			<input type="text" th:field="*{gender}" /><br/>
+			<label>Profession:</label>
+			<input type="text" th:field="*{profession}" /><br/>
+			<label>Married:</label>
+			<input type="text" th:field="*{married}" /><br/>
+			<label>Birthday:</label>
+			<input type="text" th:field="*{birthday}" /><br/>
+			<label>Password:</label>
+			<input type="text" th:field="*{password}" /><br/>
+			<button type="submit">Register</button>
 		</form>
 	</div>
 </body>

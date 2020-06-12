@@ -68,6 +68,11 @@ public class User {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}  // End of the 'setBirthday' method
-	
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", email=" + email + ", password=" + password + ", gender=" + gender
+				+ ", profession=" + profession + ", married=" + married + ", birthday=" + birthday + "]";
+	}  // End of the 'toString' method
 	
 }  // End of the 'User' class
